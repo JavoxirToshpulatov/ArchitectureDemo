@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Demo.Application.Models
 {
-    public class PersonResponseModel
+    public class BaseResponseModel
     {
-        public string FullName { get; set; }
+        public int Id { get; set; }
     }
 }

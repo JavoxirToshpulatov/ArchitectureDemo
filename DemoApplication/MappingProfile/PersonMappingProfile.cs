@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
-using Demo.Application.Models;
+using Demo.Application.Models.PersonModels;
 using Demo.Core.Entities;
-using DemoApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DemoApplication.Models
+namespace Demo.Application.Models.PersonModels
 {
-    public class BasePersonModel
+    public class PersonResponseModel
     {
-        public int Id { get; set; }
+        public string FullName { get; set; }
     }
 }

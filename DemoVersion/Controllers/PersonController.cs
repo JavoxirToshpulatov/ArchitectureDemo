@@ -1,10 +1,11 @@
-﻿using DemoApplication.Models;
+﻿using Demo.Application.Models.PersonModels;
 using DemoApplication.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DemoVersion.Controllers
 {
     [Controller]
+    [Route("api/[controller]")]
     public class PersonController : ControllerBase
     {
         private readonly IPersonService _personService;

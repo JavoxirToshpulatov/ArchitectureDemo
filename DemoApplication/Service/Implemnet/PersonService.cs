@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using Demo.Application.Models;
+using Demo.Application.Models.PersonModels;
+using Demo.Application.Models.RoomModels;
 using Demo.Core.Entities;
-using DemoApplication.Models;
 using DemoDataAccess.Repositories;
 
 namespace DemoApplication.Service.Implemnet
@@ -26,15 +27,15 @@ namespace DemoApplication.Service.Implemnet
             };
         }
 
-        public async Task<BasePersonModel> DeleteAsync(int id)
-        {
-            var person = await _personRepository.GetFirstAsync(p => p.Id == id);
+        //public async Task<BasePersonModel> DeleteAsync(int id)
+        //{
+        //    var person = await _personRepository.GetFirstAsync(p => p.Id == id);
 
-            return new BasePersonModel
-            {
-                Id = (await _personRepository.DeleteAsync(person)).Id
-            };
-        }
+        //    return new BasePersonModel
+        //    {
+        //        Id = (await _personRepository.DeleteAsync(person)).Id
+        //    };
+        //}
 
         public async Task<IEnumerable<Person>> GetAllAsync()
         {
@@ -56,6 +57,16 @@ namespace DemoApplication.Service.Implemnet
             return new UpdatePersonResponseModel
             {
                 Id = (await _personRepository.UpdateAsync(person)).Id
+            };
+        }
+
+       public async Task<BaseResponseModel> DeleteAsync(int id)
+        {
+            var person = await _personRepository.GetFirstAsync(p => p.Id == id);
+
+            return new BaseResponseModel
+            {
+                Id = (await _personRepository.DeleteAsync(person)).Id
             };
         }
     }

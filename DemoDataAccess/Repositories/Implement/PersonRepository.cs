@@ -21,7 +21,7 @@ namespace DemoDataAccess.Repositories.Implement
 
         public async Task<Person> DeleteAsync(Person person)
         {
-            var deletePerson = _databaseContext.People.FirstOrDefault(person => person.Id == person.Id);
+            var deletePerson =  _databaseContext.People.FirstOrDefault(person => person.Id == person.Id);
             _databaseContext.People.Remove(deletePerson);
             _databaseContext.SaveChanges();
             return deletePerson;

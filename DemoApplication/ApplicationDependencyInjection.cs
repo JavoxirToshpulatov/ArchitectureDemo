@@ -1,4 +1,8 @@
-﻿using DemoApplication.MappingProfile;
+﻿using Demo.Application.Service;
+using Demo.Application.Service.Implemnet;
+using Demo.DataAccess.Repositories;
+using Demo.DataAccess.Repositories.Implement;
+using DemoApplication.MappingProfile;
 using DemoApplication.Service;
 using DemoApplication.Service.Implemnet;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +24,9 @@ namespace Demo.Application
         {
 
             services.AddScoped<IPersonService, PersonService>();
+            services.AddScoped<IRoomService, RoomService>();
+            services.AddScoped<IExamService, ExamService>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
 
         }
 

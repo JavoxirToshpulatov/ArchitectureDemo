@@ -1,6 +1,7 @@
 ﻿using Demo.Application.Models;
+using Demo.Application.Models.PersonModels;
+using Demo.Application.Models.RoomModels;
 using Demo.Core.Entities;
-using DemoApplication.Models;
 
 namespace DemoApplication.Service
 {
@@ -8,12 +9,12 @@ namespace DemoApplication.Service
     {
         Task<CreatePersonResponseModel> CreateAsync(CreatePersonModel person);
 
-        Task<BasePersonModel> DeleteAsync(int id);
+        Task<BaseResponseModel> DeleteAsync(int id);
 
         Task<IEnumerable<Person>> GetAllAsync();
         Task<PersonResponseModel> GetById(int id);
 
-        Task<UpdatePersonResponseModel> UpdateAsync(int id, UpdatePersonModel updatePersonModel);
+        Task<UpdatePersonResponseModel> UpdateAsync(int id, UpdatePersonModel updateRoomModel);
 
     }
 }
